@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fantin Pesant – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #60a5fa;
+      --bg: #020617;
+      --surface: #0f172a;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1e293b;
+      z-index: 10;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 1rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero img {
+      max-width: 350px;      /* taille de la photo */
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #0f172a, #020617);
+      padding: 2.2rem;
+      border-radius: 20px;
+      border: 1px solid #1e293b;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 70px rgba(0,0,0,0.45);
+    }
+
+    .competence-card span {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--primary);
+      letter-spacing: 0.03em;
+    }
+
+    .competence-card .icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    footer {
+      background: #020617;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    footer a { color: #93c5fd; }
+      .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+    }
+
+    .project-card {
+      background: #020617;
+      padding: 2.5rem;
+      border: solid 1px #1e293b;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      margin: 0.4rem 0;
+      color: var(--muted);
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <strong>Fantin Pesant</strong>
+    <div>
+      <a href="#about">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#cv">CV</a>
+    </div>
+  </nav>
+</header>
+
+<section id="about">
+  <div class="hero">
+    <div>
+      <h1>Développeur informatique</h1>
+      <p>
+        Étudiant en BUT Informatique, je m'intéresse particulièrement au développement d'applications web et mobiles ainsi qu'à l'IA.
+        Ce portfolio présente l'évolution de mes compétences à travers mes projets personnels, professionnels, mon stage et mon alternance en cours.
+      </p>
+    </div>
+    <img src="photo_id.jpg" alt="Photo de profil" />
+  </div>
+  <div class="card" style="margin-top:3rem; max-width:900px">
+    <h2>Parcours</h2>
+    <p><strong>BUT Informatique</strong><br />
+    Formation généraliste en développement logiciel, bases de données et algorithmique.</p>
+    <p><strong>Stage – Développement web</strong><br />
+    Refonte d’une application web existante de Gatsby.js vers Next.js afin d’améliorer la maintenabilité et les performances.</p>
+    <p><strong>Alternance – Qualité logicielle</strong><br />
+    Mise en place de tests automatisés en Cucumber et Java sur une application Flutter afin de fiabiliser les fonctionnalités.</p>
+  </div>  
+</section>
+
+<section id="competences">
+  <h2>Compétences</h2>
+  <p style="color:var(--muted); max-width:700px; margin-bottom:3rem">
+    Compétences techniques développées à travers mes projets académiques, personnels et professionnels.
+  </p>
+
+  <div class="grid competences-grid" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="card competence-card">
+      <div class="icon">🎨</div>
+      <h3>Front-end</h3>
+      <p>Interfaces web modernes, accessibles et ergonomiques.</p>
+      <span>HTML • CSS • JavaScript • React</span>
+    </div>
+
+    <div class="card competence-card">
+      <div class="icon">🧩</div>
+      <h3>Back-end</h3>
+      <p>Conception d’API, gestion des données et authentification.</p>
+      <span>Node.js • Firebase</span>
+    </div>
+
+    <div class="card competence-card">
+      <div class="icon">🎮</div>
+      <h3>Jeux vidéo</h3>
+      <p>Développement de jeux simples orientés logique et algorithmique.</p>
+      <span>C++ • Python</span>
+    </div>
+
+    <div class="card competence-card">
+      <div class="icon">🤖</div>
+      <h3>Intelligence artificielle</h3>
+      <p>Création de modèles et traitements de données.</p>
+      <span>PyTorch • NumPy</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projets</h2>
+  <p style="color:var(--muted); max-width:750px; margin-bottom:3rem">
+    Sélection de projets illustrant l’évolution de mes compétences techniques dans des contextes académiques et professionnels.
+  </p>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Application immobilière Java</h3>
+      <p><strong>Contexte :</strong> projet académique</p>
+      <p><strong>Objectif :</strong> développer une application avec base de données et interface utilisateur.</p>
+      <p><strong>Compétences :</strong> Java, bases de données, UI</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Tetris en Python</h3>
+      <p><strong>Contexte :</strong> projet personnel</p>
+      <p><strong>Objectif :</strong> développer un jeu complet intégrant logique et gestion des événements.</p>
+      <p><strong>Compétences :</strong> algorithmique, Python</p>
+    </div>
+
+    <div class="project-card">
+      <h3>IA de reconnaissance de chiffres manuscrits</h3>
+      <p><strong>Contexte :</strong> projet personnel</p>
+      <p><strong>Objectif :</strong> concevoir un modèle capable de reconnaître des chiffres manuscrits.</p>
+      <p><strong>Compétences :</strong> IA, PyTorch, traitement de données</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Refonte d’application web (Gatsby → Next.js)</h3>
+      <p><strong>Contexte :</strong> stage</p>
+      <p><strong>Objectif :</strong> moderniser une application existante et améliorer sa maintenabilité.</p>
+      <p><strong>Compétences :</strong> React, Next.js, intégration web</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Tests automatisés sur application Flutter</h3>
+      <p><strong>Contexte :</strong> alternance</p>
+      <p><strong>Objectif :</strong> fiabiliser une application via des tests automatisés.</p>
+      <p><strong>Compétences :</strong> tests automatisés, Cucumber, Java</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Application de gestion de dépenses</h3>
+      <p><strong>Besoin :</strong> faciliter la gestion de dépenses de groupe.</p>
+      <p><strong>Solution :</strong> application Flutter avec authentification et statistiques.</p>
+      <p><strong>Résultat :</strong> application fonctionnelle testée par des utilisateurs.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="cv">
+  <h2>CV</h2>
+  <p>
+    <a href="cv.pdf" target="_blank">Télécharger mon CV</a> | 
+    <a href="https://github.com/F4NT1N" target="_blank">Mon GitHub</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 – Prénom Nom | Portfolio professionnel</p>
+  <div style="margin-top:1rem; line-height:1.8">
+    <p>💼 <a href="https://www.linkedin.com/in/fantin-pesant-2a1a1233a" target="_blank">LinkedIn</a></p>
+    <p>📧 <a href="mailto:fantin.pesant@gmail.com">fantin.pesant@gmail.com</a></p>
+    <p>📞 <a href="tel:+33695027318">+33 6 95 02 73 18</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
